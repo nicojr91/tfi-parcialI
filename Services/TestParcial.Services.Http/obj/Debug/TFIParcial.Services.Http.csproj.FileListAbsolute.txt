@@ -1,0 +1,6 @@
+C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.Services.Http.dll.config
+C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.Services.Http.dll
+C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.Services.Http.pdb
+C:\Users\Nico\Desktop\TFI Parcial\Services\TestParcial.Services.Http\obj\Debug\TFIParcial.Services.Http.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\TFI Parcial\Services\TestParcial.Services.Http\obj\Debug\TestParcial.Services.Http.dll
+C:\Users\Nico\Desktop\TFI Parcial\Services\TestParcial.Services.Http\obj\Debug\TestParcial.Services.Http.pdb

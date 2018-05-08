@@ -1,0 +1,10 @@
+C:\Users\Nico\Desktop\ASF-TestParcial\bin\TestParcial.Entities.dll
+C:\Users\Nico\Desktop\ASF-TestParcial\bin\TestParcial.Entities.pdb
+C:\Users\Nico\Desktop\ASF-TestParcial\Shared\TestParcial.Entities\obj\Debug\TestParcial.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\ASF-TestParcial\Shared\TestParcial.Entities\obj\Debug\TestParcial.Entities.dll
+C:\Users\Nico\Desktop\ASF-TestParcial\Shared\TestParcial.Entities\obj\Debug\TestParcial.Entities.pdb
+C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.Entities.dll
+C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.Entities.pdb
+C:\Users\Nico\Desktop\TFI Parcial\Shared\TestParcial.Entities\obj\Debug\TestParcial.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\TFI Parcial\Shared\TestParcial.Entities\obj\Debug\TestParcial.Entities.dll
+C:\Users\Nico\Desktop\TFI Parcial\Shared\TestParcial.Entities\obj\Debug\TestParcial.Entities.pdb

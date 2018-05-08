@@ -1,0 +1,5 @@
+C:\Users\Nico\Desktop\ASF-TestParcial\bin\TestParcial.Framework.dll
+C:\Users\Nico\Desktop\ASF-TestParcial\bin\TestParcial.Framework.pdb
+C:\Users\Nico\Desktop\ASF-TestParcial\Shared\TestParcial.Framework\obj\Debug\TestParcial.Framework.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\ASF-TestParcial\Shared\TestParcial.Framework\obj\Debug\TestParcial.Framework.dll
+C:\Users\Nico\Desktop\ASF-TestParcial\Shared\TestParcial.Framework\obj\Debug\TestParcial.Framework.pdb

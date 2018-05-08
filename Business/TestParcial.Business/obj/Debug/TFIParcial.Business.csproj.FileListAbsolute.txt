@@ -1,0 +1,5 @@
+C:\Users\Nico\Desktop\TFI Parcial\bin\TFIParcial.Business.dll
+C:\Users\Nico\Desktop\TFI Parcial\bin\TFIParcial.Business.pdb
+C:\Users\Nico\Desktop\TFI Parcial\Business\TestParcial.Business\obj\Debug\TFIParcial.Business.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\TFI Parcial\Business\TestParcial.Business\obj\Debug\TFIParcial.Business.dll
+C:\Users\Nico\Desktop\TFI Parcial\Business\TestParcial.Business\obj\Debug\TFIParcial.Business.pdb

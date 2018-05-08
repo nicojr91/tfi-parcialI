@@ -1,0 +1,5 @@
+C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.Framework.dll
+C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.Framework.pdb
+C:\Users\Nico\Desktop\TFI Parcial\Shared\TestParcial.Framework\obj\Debug\TFIParcial.Framework.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\TFI Parcial\Shared\TestParcial.Framework\obj\Debug\TestParcial.Framework.dll
+C:\Users\Nico\Desktop\TFI Parcial\Shared\TestParcial.Framework\obj\Debug\TestParcial.Framework.pdb

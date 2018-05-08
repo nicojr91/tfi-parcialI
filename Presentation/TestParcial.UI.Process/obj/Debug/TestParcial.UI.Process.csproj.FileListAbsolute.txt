@@ -1,0 +1,10 @@
+C:\Users\Nico\Desktop\ASF-TestParcial\bin\TestParcial.UI.Process.dll
+C:\Users\Nico\Desktop\ASF-TestParcial\bin\TestParcial.UI.Process.pdb
+C:\Users\Nico\Desktop\ASF-TestParcial\Presentation\TestParcial.UI.Process\obj\Debug\TestParcial.UI.Process.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\ASF-TestParcial\Presentation\TestParcial.UI.Process\obj\Debug\TestParcial.UI.Process.dll
+C:\Users\Nico\Desktop\ASF-TestParcial\Presentation\TestParcial.UI.Process\obj\Debug\TestParcial.UI.Process.pdb
+C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.UI.Process.dll
+C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.UI.Process.pdb
+C:\Users\Nico\Desktop\TFI Parcial\Presentation\TestParcial.UI.Process\obj\Debug\TestParcial.UI.Process.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\TFI Parcial\Presentation\TestParcial.UI.Process\obj\Debug\TestParcial.UI.Process.dll
+C:\Users\Nico\Desktop\TFI Parcial\Presentation\TestParcial.UI.Process\obj\Debug\TestParcial.UI.Process.pdb
