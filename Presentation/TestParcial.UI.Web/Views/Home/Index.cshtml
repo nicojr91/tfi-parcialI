@@ -3,6 +3,20 @@
 }
 
 <div class="row">
+    
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <select id="select-sucursal" class="controls">
+            <option disabled selected>Sucursales</option>
+            @foreach (var suc in ViewBag.sucursales)
+            {
+                <option value="@suc.Id">@suc.Zona</option>
+            }
+        </select>
+    </div>
+
     <div class="col-md-12">
         <input id="pac-input" class="controls" type="text" placeholder="Search Box">
         <div id="map" style="height: 600px;"></div>
@@ -10,7 +24,7 @@
 
     <br />
     <div class="col-md-6">
-        <b>From:</b> Alsina 26, San isidro, Argentina <br />
+        <b>From:</b> <span id="origin-dir">@ViewBag.sucursales[0].Direccion</span> <br />
         <b>To:</b> <div id="dir" style="display: inline-block;"></div>
     </div>
     <div class="col-md-6" id="data" style="text-align: right;">
@@ -21,26 +35,42 @@
 
 @section scripts {
 <script>
-    var places = [];
+    var markers = [];
+    var origin = "@ViewBag.sucursales[0].Direccion";
 
     function initAutocomplete() {
+        var latitud = @ViewBag.sucursales[0].Latitud;
+        var longitud = @ViewBag.sucursales[0].Longitud;
+
+        var pos = { lat: latitud, lng: longitud };
+
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: -34.4721862, lng: -58.51530059999999 },
+            center: pos,
             zoom: 13,
-            mapTypeId: 'roadmap'
+            mapTypeId: 'roadmap',
+            mapTypeControl: false,
+            panControl: false,
+            streetViewControl: false
+        });
+        markers["origin"] = new google.maps.Marker({
+            position: pos,
+            map: map,
+            title: "@ViewBag.sucursales[0].Zona"
         });
 
         // Create the search box and link it to the UI element.
         var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(document.getElementById('select-sucursal'));
+        
 
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function () {
             searchBox.setBounds(map.getBounds());
         });
 
-        var markers = [];
+        
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
         searchBox.addListener('places_changed', function () {
@@ -50,12 +80,6 @@
                 return;
             }
 
-            // Clear out the old markers.
-            markers.forEach(function (marker) {
-                marker.setMap(null);
-            });
-            markers = [];
-
             // For each place, get the icon, name and location.
             var bounds = new google.maps.LatLngBounds();
             places.forEach(function (place) {
@@ -63,37 +87,39 @@
                     console.log("Returned place contains no geometry");
                     return;
                 }
-                var icon = {
+                /*var icon = {
                     url: place.icon,
                     size: new google.maps.Size(71, 71),
                     origin: new google.maps.Point(0, 0),
                     anchor: new google.maps.Point(17, 34),
                     scaledSize: new google.maps.Size(25, 25)
-                };
+                };*/
 
                 $("#dir").text(place.formatted_address);
                 //console.log(place);
-                var origin = "Alsina 26, B1642FNB San Isidro, Buenos Aires, Argentina";
+                origin = "@ViewBag.sucursales[0].Direccion";
                 $.getJSON("/Home/GetPrice", { "origin": origin, "place": place.formatted_address }, function (data) {
                     if (!data.success) {
                         alert("error");
                         return;
                     }
-                    $("#data").append("<b>Distance: </b>" + data.totalKm + " km <br/>");
-                    $("#data").append("<b>Price Km: </b>" + data.kmPrice + " km <br/>");
-                    $("#data").append("<b>Total Price: </b>$" + data.price + "<br/>");
+                    $("#data").children().remove()
+                    $("#data").append("<b>Distance: </b><span>" + data.totalKm + " km </span><br/>");
+                    $("#data").append("<b>Price Km: </b><span>" + data.kmPrice + " km </span><br/>");
+                    $("#data").append("<b>Total Price: </b><span>$" + data.price + "</span><br/>");
                     console.log(data);
                 });
 
-                var marker = new google.maps.Marker({
+                // Create a marker for each place.
+                if(markers.hasOwnProperty("destination")) {
+                    markers["destination"].setMap(null);
+                }
+                markers["destination"] = new google.maps.Marker({
                     map: map,
-                    icon: icon,
+                    //icon: icon,
                     title: place.name,
                     position: place.geometry.location
                 });
-
-                // Create a marker for each place.
-                markers.push(marker);
 
                 if (place.geometry.viewport) {
                     // Only geocodes have viewport.
@@ -104,6 +130,29 @@
             });
             map.fitBounds(bounds);
         });
+
+        $("#select-sucursal").on("change", function(){
+            $.getJSON("/Home/GetSucursal", { "id": $(this).val() }, function (data) {
+                if (!data.success) {
+                    alert("error");
+                    return;
+                }
+
+                $("#origin-dir").text(data.suc.Direccion);
+
+                markers["origin"].setMap(null);
+                markers["origin"] = new google.maps.Marker({
+                    position: { lat: Number(data.suc.Latitud), lng: Number(data.suc.Longitud) },
+                    map: map,
+                    title: data.suc.Zona
+                });
+
+                markers["destination"].setMap(null);
+                
+                console.log(data);
+            });
+        });
+
     }
 
 </script>

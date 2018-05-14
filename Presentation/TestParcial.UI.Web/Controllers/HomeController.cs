@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
+using TestParcial.Entities;
 using TestParcial.UI.Process;
 using TFIParcial.UI.Process;
 
@@ -15,22 +16,11 @@ namespace TFIParcial.UI.Web.Controllers
     {
         private DistanceProcess distanceProcess = new DistanceProcess();
         private PriceProcess priceProcess = new PriceProcess();
+        private SucursalProcess sucursalProcess = new SucursalProcess();
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.sucursales = sucursalProcess.List();
 
             return View();
         }
@@ -45,6 +35,17 @@ namespace TFIParcial.UI.Web.Controllers
             var price = priceProcess.FindByKm(km);
 
             var json = new { success = true, totalKm = km, kmPrice = price.Kilometers, price = price.Value };
+
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult GetSucursal()
+        {
+            int id = Int32.Parse(Request["id"]);
+
+            Sucursal suc = sucursalProcess.FindById(id);
+
+            var json = new { success = true, suc = suc };
 
             return Json(json, JsonRequestBehavior.AllowGet);
         }

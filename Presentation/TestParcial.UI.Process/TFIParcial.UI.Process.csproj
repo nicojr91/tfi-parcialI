@@ -49,6 +49,7 @@
     <Compile Include="PriceProcess.cs" />
     <Compile Include="ProcessComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SucursalProcess.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Services\TestParcial.Services.Contracts\TFIParcial.Services.Contracts.csproj">

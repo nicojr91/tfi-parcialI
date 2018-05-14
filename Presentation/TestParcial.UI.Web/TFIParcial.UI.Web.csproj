@@ -121,6 +121,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PriceController.cs" />
+    <Compile Include="Controllers\SucursalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -168,6 +169,8 @@
     <Content Include="Views\Price\Index.cshtml" />
     <Content Include="Views\Price\Create.cshtml" />
     <Content Include="Views\Price\Edit.cshtml" />
+    <Content Include="Views\Sucursal\Index.cshtml" />
+    <Content Include="Views\Sucursal\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

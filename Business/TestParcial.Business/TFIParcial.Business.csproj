@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="PriceBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SucursalBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Data\TestParcial.Data\TFIParcial.Data.csproj">

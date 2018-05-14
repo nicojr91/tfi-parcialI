@@ -2,3 +2,4 @@ C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.Entities.dll
 C:\Users\Nico\Desktop\TFI Parcial\bin\TestParcial.Entities.pdb
 C:\Users\Nico\Desktop\TFI Parcial\Shared\TestParcial.Entities\obj\Debug\TestParcial.Entities.dll
 C:\Users\Nico\Desktop\TFI Parcial\Shared\TestParcial.Entities\obj\Debug\TestParcial.Entities.pdb
+C:\Users\Nico\Desktop\TFI Parcial\Shared\TestParcial.Entities\obj\Debug\TFIParcial.Entities.csprojResolveAssemblyReference.cache
